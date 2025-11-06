@@ -7,7 +7,7 @@
     "dev": "npm-run-all --parallel postcss:watch eleventy:watch",
     "postcss:watch": "postcss src/style.css --dir public --watch --serve",
     "eleventy:watch": "eleventy --serve --watch",
-    "postcss:build": "postcss src/style.css --dir static",
+    "postcss:build": "postcss src/style.css --dir public",
     "build": "npm run postcss:build && eleventy"
   },
   "keywords": [],
