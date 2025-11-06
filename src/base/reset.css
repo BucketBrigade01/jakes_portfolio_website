@@ -1,0 +1,136 @@
+@layer reset {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html {
+        -moz-text-size-adjust: none;
+        -webkit-text-size-adjust: none;
+        text-size-adjust: none;
+        interpolate-size: allow-keywords;
+        hanging-punctuation: first last;
+    }
+
+    :target {
+        scroll-margin-block: 2lh;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        html {
+            scroll-behavior: smooth;
+        }
+    }
+
+    /* Make body have no margin */
+    body {
+        margin: 0;
+        min-height: 100svh;
+        line-height: var(--body-line-height);
+    }
+
+    header,
+    footer,
+    main,
+    section,
+    article {
+        container-type: inline-size;
+    }
+
+    /* First child has no margin on the top */
+    :first-child {
+        margin-block-start: 0;
+    }
+
+    /* Elements don't have a margin bottom */
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    figure,
+    blockquote,
+    d1,
+    dd {
+        margin: 0;
+    }
+
+    :is(l, ol)[class] {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    button,
+    label {
+        line-height: var(--body-header-line-height);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-wrap: balanced;
+        font-family: var(--base-head-family);
+    }
+
+    p,
+    li,
+    figcaption {
+        max-width: var(--body-text-max-width);
+        text-wrap: pretty;
+    }
+
+    img,
+    picture {
+        max-width: 100%;
+        vertical-align: middle;
+        height: auto;
+        font-style: italic;
+        background-repeat: no-repeat;
+        background-size: cover;
+        shape-margin: 1rem;
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+        font-family: inherit;
+        font-size: inherit;
+    }
+
+    textarea:not([rows]) {
+        min-height: 10em;
+    }
+
+    code {
+        font-family: var(--code-font-family);
+    }
+
+    @media (hover: hover) {
+        button:not(:disabled) {
+            cursor: pointer;
+        }
+    }
+
+    table,
+    math,
+    time[datetime*=":"] {
+        font-variant-numeric: tabular-nums lining-nums;
+    }
+}
+
+body {
+    font-family: var(--base-font-family);
+}

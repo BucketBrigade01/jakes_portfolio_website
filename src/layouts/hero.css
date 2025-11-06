@@ -1,0 +1,38 @@
+#hero > * {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+#hero.show > * {
+    opacity: 1;
+}
+
+#hero > * {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+#hero.show > * {
+    opacity: 1;
+}
+
+.hero-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.hero-image img {
+    width: 20rem;
+}
+
+.hero-blurb {
+    display: grid;
+    row-gap: 1rem;
+    & h4 {
+        max-width: 20ch;
+    }
+}

@@ -1,0 +1,111 @@
+header {
+    background-color: transparent;
+    z-index: 10;
+}
+nav {
+    position: relative;
+    background-color: var(--color-primary);
+}
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    & ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding: 0;
+    }
+    & a {
+        display: flex;
+        padding: 1rem;
+        color: var(--color-secondary);
+        background-color: var(--color-primary);
+        text-decoration: none;
+        transition:
+            background-color 0.3s ease,
+            color 0.3s ease;
+    }
+    & a:hover {
+        background-color: var(--color-secondary);
+        color: var(--color-primary);
+    }
+    & a:focus {
+        background-color: var(--color-light);
+        color: var(--color-primary);
+    }
+}
+#nav-close-button {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--color-secondary);
+    z-index: 10;
+    background-color: transparent;
+    border: none;
+    font-size: var(--font-300);
+    padding: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+#nav-open-button {
+    display: none;
+    color: var(--color-secondary);
+    z-index: 10;
+    background-color: transparent;
+    border: none;
+    font-size: var(--font-300);
+    padding: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+@media (--md-screen) {
+    header {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100svh;
+        width: 100%;
+        z-index: 100;
+        transition: left 0.3s ease-in-out;
+    }
+    nav.slide {
+        left: 0;
+    }
+    .nav-items {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        & ul {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    #nav-close-button {
+        display: block;
+    }
+    #nav-open-button {
+        display: block;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .menue-icon {
+        height: 2rem;
+        width: 2rem;
+        fill: var(--color-secondary);
+    }
+    nav.slide + #nav-open-button {
+        display: none;
+    }
+}

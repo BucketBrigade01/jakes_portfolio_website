@@ -1,0 +1,25 @@
+.default-button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+
+    background-color: var(--color-secondary);
+    font-size: var(--font-300);
+    font-weight: 600;
+
+    box-shadow: 0 6px 0 var(--color-primary);
+
+    border-radius: var(--border-rad-sm);
+    transition: all 0.1s ease;
+}
+
+.default-button:hover {
+    scale: 1.04;
+}
+
+.default-button:active {
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-secondary);
+    color: var(--color-secondary);
+    scale: 0.96;
+}

@@ -1,0 +1,19 @@
+@layer reset, base, layout, component, utility;
+
+@custom-media --sm-screen (width < 640px);
+@custom-media --md-screen (width < 900px);
+@custom-media --lg-screen (width < 1024px);
+@custom-media --xl-screen (width < 1440px);
+@custom-media --2xl-screen (width < 1920px);
+
+:root {
+    --base-font-family: system-ui;
+    --base-head-family: system-ui;
+    --base-code-family: monospace;
+    --body-text-max-width: 65ch;
+    --body-line-height: 1.6;
+    --body-header-line-height: 1.1;
+    --border-rad-sm: 1rem;
+    --border-rad-md: 2rem;
+    --border-rad-lg: 3rem;
+}

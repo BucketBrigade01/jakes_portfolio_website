@@ -1,0 +1,42 @@
+@layer base {
+    /** {
+        outline: 1px dotted red;
+    }*/
+
+    h1 {
+        font-size: var(--font-600);
+        color: var(--color-secondary);
+        font-family: var(--font-secondary);
+    }
+
+    h2 {
+        font-size: var(--font-500);
+        color: var(--color-secondary);
+        font-family: var(--font-secondary);
+    }
+
+    h3 {
+        font-size: var(--font-400);
+        color: var(--color-secondary);
+        font-family: var(--font-secondary);
+    }
+
+    h4 {
+        font-size: var(--font-300);
+        color: var(--color-secondary);
+        font-family: var(--font-secondary);
+    }
+
+    p {
+        font-size: var(--font-100);
+        color: var(--color-secondary);
+    }
+
+    header {
+        background-color: var(--color-light);
+    }
+
+    body {
+        background-color: var(--color-primary);
+    }
+}
