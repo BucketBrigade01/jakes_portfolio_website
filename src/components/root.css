@@ -13,7 +13,13 @@
     --body-text-max-width: 65ch;
     --body-line-height: 1.6;
     --body-header-line-height: 1.1;
+
     --border-rad-sm: 1rem;
     --border-rad-md: 2rem;
     --border-rad-lg: 3rem;
+
+    --color-light: #a3a29a;
+    --color-secondary: #c56981;
+    --color-accent: #545c7e;
+    --color-primary: #282328;
 }

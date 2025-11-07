@@ -9,11 +9,11 @@
 
 .about-items {
     display: grid;
-    grid-template-areas: "about-title about-title" "who-i-am skills";
+    grid-template-areas: "about-title about-title" "who-i-am skills" "work skills";
     gap: 5rem;
     grid-template-columns: 1fr 1fr;
     @media (--md-screen) {
-        grid-template-areas: "about-title about-title" "who-i-am who-i-am" "skills skills";
+        grid-template-areas: "about-title about-title" "who-i-am who-i-am" "work work" "skills skills";
         grid-template-columns: 1fr;
         justify-items: center;
         column-gap: 0;
@@ -53,6 +53,19 @@
     }
 }
 
+.about-work-experience {
+    display: grid;
+    row-gap: 1rem;
+    grid-area: work;
+    @media (--md-screen) {
+        text-align: center;
+        place-items: center;
+        border: 2px dashed var(--color-secondary);
+        border-radius: var(--border-rad-sm);
+        padding: 1rem;
+    }
+}
+
 .about-skills {
     display: grid;
     row-gap: 1rem;
@@ -69,5 +82,15 @@
         box-shadow: none;
         border-radius: none;
         row-gap: 4rem;
+    }
+}
+
+.job {
+    & .title {
+        font-weight: 700;
+    }
+
+    & .date {
+        font-weight: 100;
     }
 }

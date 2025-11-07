@@ -45,7 +45,7 @@ textarea {
     width: 100%;
 
     @media (--sm-screen) {
-        padding: 2rem;
+        padding: 0.5rem;
     }
 }
 

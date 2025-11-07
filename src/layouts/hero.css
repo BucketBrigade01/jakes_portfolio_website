@@ -7,15 +7,6 @@
     opacity: 1;
 }
 
-#hero > * {
-    opacity: 1;
-    transition: opacity 1s ease;
-}
-
-#hero.show > * {
-    opacity: 1;
-}
-
 .hero-items {
     display: flex;
     flex-direction: row;
@@ -27,6 +18,10 @@
 
 .hero-image img {
     width: 20rem;
+
+    @media (--sm-screen) {
+        width: 10rem;
+    }
 }
 
 .hero-blurb {
@@ -34,5 +29,8 @@
     row-gap: 1rem;
     & h4 {
         max-width: 20ch;
+    }
+    @media (--sm-screen) {
+        text-align: center;
     }
 }
