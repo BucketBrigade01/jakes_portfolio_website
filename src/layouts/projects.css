@@ -42,8 +42,6 @@
         object-fit: cover;
         border-radius: var(--border-rad-sm);
         background-color: var(--color-secondary);
-        background-blend-mode: multiply;
-        filter: grayscale(0.9) contrast(1.1);
     }
     & h4,
     & p {

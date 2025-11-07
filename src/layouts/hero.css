@@ -7,6 +7,12 @@
     opacity: 1;
 }
 
+.hero-section {
+    @media (--md-screen) {
+        padding-top: 5rem;
+    }
+}
+
 .hero-items {
     display: flex;
     flex-direction: row;

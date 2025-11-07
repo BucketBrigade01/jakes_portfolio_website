@@ -1,27 +1,19 @@
 const root = document.documentElement;
 
-function applySavedTheme() {
-  const savedScheme = localStorage.getItem("colorScheme");
-  if (savedScheme === "alternate") {
-    root.style.setProperty("--color-secondary", "#545c7e");
-    root.style.setProperty("--color-accent", "#c56981");
-  }
-}
+function applyThemeBasedOnPage() {
+  const currentPage = window.location.pathname;
 
-applySavedTheme();
-
-function switchColorScheme() {
-  const currentSecondary = getComputedStyle(root)
-    .getPropertyValue("--color-secondary")
-    .trim();
-
-  if (currentSecondary === "#c56981") {
-    root.style.setProperty("--color-secondary", "#545c7e");
-    root.style.setProperty("--color-accent", "#c56981");
-    localStorage.setItem("colorScheme", "alternate");
-  } else {
+  if (
+    currentPage === "/page1.html" ||
+    currentPage === "/page1" ||
+    currentPage === "/"
+  ) {
     root.style.setProperty("--color-secondary", "#c56981");
     root.style.setProperty("--color-accent", "#545c7e");
-    localStorage.setItem("colorScheme", "default");
+  } else if (currentPage === "/design/index.html") {
+    root.style.setProperty("--color-secondary", "#545c7e");
+    root.style.setProperty("--color-accent", "#c56981");
   }
 }
+
+applyThemeBasedOnPage();
