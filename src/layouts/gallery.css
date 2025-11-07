@@ -1,0 +1,13 @@
+.gallery-items {
+    width: 100%;
+    columns: 3;
+    & img {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        border-radius: var(--border-rad-sm);
+    }
+
+    @media (--md-screen) {
+        columns: 2;
+    }
+}
